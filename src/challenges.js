@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(darthVader, lukeSkywalker) {
-  if (darthVader === true && lukeSkywalker === true) {
+function compareTrue(darthVader, anakinSkywalker) {
+  if (darthVader === true && anakinSkywalker === true) {
     return true;
   } else {
     return false;
@@ -8,8 +8,8 @@ function compareTrue(darthVader, lukeSkywalker) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return((base * height) / 2); 
 }
 
 // Desafio 3
