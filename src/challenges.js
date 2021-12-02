@@ -22,6 +22,7 @@ function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length -1];
   return `${ultimo}, ${primeiro}`;
+  // referencia de template strings buscado no mdn https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 }
 
 // Desafio 5
