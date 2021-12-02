@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(darthVader, lukeSkywalker) {
+  if (darthVader === true && lukeSkywalker === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
