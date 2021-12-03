@@ -22,7 +22,7 @@ function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length -1];
   return `${ultimo}, ${primeiro}`;
-  // referencia de template strings buscado no mdn https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+  // referencia do template strings buscado no mdn https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 }
 
 // Desafio 5
@@ -31,22 +31,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numero, contador) {
-  for (let vezesAparece = 0; vezesAparece < numero.length; vezesAparece += 1) {
-    if (numero[vezesAparece] === contador) {
-      contador++
-    }
+function highestCount(array) {
+  let numerosOrdenados = []; // adicionar aqui os números ordenados
+  let maiorNumero = []; // contar quantas vezes o maior número aparece e adicionar aqui
+  for (index = 0; index < numerosOrdenados.length; index += 1) {
+    numerosOrdenados++;
+    //percorrer os números ordenados procurando quantas vezes o último index (-1) se repete e adicona na variavel maiorNumero com .push
+
   }
-  return contador;
+  return maiorNumero.length;
 }
 
 // Desafio 7
+// referencia de Math.abs() retirado no MDN https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) < (cat2 - mouse)) {
-    return cat2;
-  } else if ((cat1 - mouse) > (cat2 - mouse)) {
-    return cat1;
-  } else if ((cat1 - mouse) === (cat2 - mouse)){
+  if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+    return "cat1";
+  } else if (Math.abs(cat2 - mouse)  < Math.abs(cat1 - mouse)) {
+    return "cat2";
+  } else if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse)) {
     return "os gatos trombam e o rato foge";
   }
 }
