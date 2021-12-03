@@ -74,6 +74,9 @@ function fizzBuzz(numeros) {
 
 
 // Desafio 9
+/*
+pegar ideia do exercício de loop (vagais em consoantes) - hacker rank e se inspirar nessa ideia
+*/
 function encode() {
   // seu código aqui
 }
