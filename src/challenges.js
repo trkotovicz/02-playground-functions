@@ -31,9 +31,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Obtive ajuda na resolução do exercício no estudo em grupo de sábado, estava errando no segundo for e não passava por alguns erros de digitação
 function highestCount(array) {
-  let arrayNumeros = array[0];
-  let maiorNumero = 0;
+  let arrayNumeros = array[0]; //acha o maior número e armazena aqui
+  let maiorNumero = 0; //verifica quantas vezes o maior número aparece
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > arrayNumeros) {
@@ -80,42 +81,33 @@ function fizzBuzz(numeros) {
 
 
 // Desafio 9
-  
-
 function encode(arrayLetras) {   
-  let vogais;
-  
+
   for (let index = 0; index < arrayLetras.length; index += 1) {
     switch (arrayLetras[index]) {
       case "a" :
-        vogais.push(1);
+        arrayLetras[index] = "1";
       break;
       case "e" :
-        vogais.push(2);
+        arrayLetras[index] = "2";
       break;
       case "i" :
-        vogais.push(3);
+        arrayLetras[index] = "3";
       break;
       case "o" :
-        vogais.push(4);
+        arrayLetras[index] = "4";
       break;
       case "u" :
-        vogais.push(5);
+        arrayLetras[index] = "5";
       break;
     }
   }
-  return vogais;
- 
-  // let resultado = arrayLetras.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5");
-  
-  // return resultado;
-  
+  return arrayLetras;
 }
+
 function decode(arrayNumeros) {
   
 }
-// console.log(encode("how are you today?"));
-// console.log(decode("h4w 1r2 y45 t4d1y?")); //console log funciona mas só passa em um dos testes do npm
 
 module.exports = {
   calcArea,
