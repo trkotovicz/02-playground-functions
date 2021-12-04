@@ -33,10 +33,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let numerosOrdenados = []; // adicionar aqui os números ordenados
-  let maiorNumero = []; // contar quantas vezes o maior número aparece e adicionar aqui
+  let maiorNumero = 0; // contar quantas vezes o maior número aparece e adicionar aqui
   for (index = 0; index < numerosOrdenados.length; index += 1) {
     numerosOrdenados++;
-    //percorrer os números ordenados procurando quantas vezes o último index (-1) se repete e adicona na variavel maiorNumero com .push
+    
 
   }
   return maiorNumero.length;
@@ -74,15 +74,42 @@ function fizzBuzz(numeros) {
 
 
 // Desafio 9
-/*
-pegar ideia do exercício de loop (vagais em consoantes) - hacker rank e se inspirar nessa ideia
-*/
-function encode() {
-  // seu código aqui
+  
+
+function encode(arrayLetras) {   
+  let vogais;
+  
+  for (let index = 0; index < arrayLetras.length; index += 1) {
+    switch (arrayLetras[index]) {
+      case "a" :
+        vogais.push(1);
+      break;
+      case "e" :
+        vogais.push(2);
+      break;
+      case "i" :
+        vogais.push(3);
+      break;
+      case "o" :
+        vogais.push(4);
+      break;
+      case "u" :
+        vogais.push(5);
+      break;
+    }
+  }
+  return vogais;
+ 
+  // let resultado = arrayLetras.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5");
+  
+  // return resultado;
+  
 }
-function decode() {
-  // seu código aqui
+function decode(arrayNumeros) {
+  
 }
+// console.log(encode("how are you today?"));
+// console.log(decode("h4w 1r2 y45 t4d1y?")); //console log funciona mas só passa em um dos testes do npm
 
 module.exports = {
   calcArea,
