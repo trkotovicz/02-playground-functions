@@ -35,20 +35,20 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // Obtive ajuda na resolução do exercício no estudo em grupo de sábado, estava errando no segundo for e não passava por alguns erros de digitação
 function highestCount(array) {
-  let arrayNumeros = array[0]; //acha o maior número e armazena aqui
-  let maiorNumero = 0; //verifica quantas vezes o maior número aparece
+  let maiorNumero = array[0]; //na posição 0 pq ele precisa começar na primeira posição, independente do valor dele ?
+  let vezesNumero = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > arrayNumeros) {
-      arrayNumeros = array[index];
+    if (array[index] > maiorNumero) { //se o array no index for maior que o maiorNumero, ele é o maior número.. mas como a gente sabe que ele é o maior número em si?
+      maiorNumero = array[index];
     }
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (arrayNumeros === array[index]) {
-      maiorNumero += 1;
+    if (maiorNumero === array[index]) {
+      vezesNumero += 1;
     }
   }
-  return maiorNumero;
+  return vezesNumero;
 }
 
 // Desafio 7
