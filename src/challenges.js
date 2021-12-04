@@ -13,6 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+/* O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. Usando o espaço vazio (" ") como parâmetro para o split, o código irá percorrer minha string e procurar todo lugar com espaço e dividir a string nesses pontos. (Ex: "Olá mundo" / o .split(" ") irá retornar um array de strings ["Olá", "mundo"])
+Referência MDN: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 function splitSentence(frase) {
   return frase.split(" ");
 }
@@ -21,8 +23,8 @@ function splitSentence(frase) {
 function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length -1];
-  return `${ultimo}, ${primeiro}`;
-  // referencia do template strings buscado no mdn https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+  let concat = ultimo + ", " + primeiro;
+  return concat;
 }
 
 // Desafio 5
