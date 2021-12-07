@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Obtive ajuda na resolução do exercício no estudo em grupo de sábado, estava errando no segundo for e não passava por alguns erros de digitação
+// Obtive ajuda na resolução do exercício no estudo em grupo, estava errando no segundo for e não passava por alguns erros de digitação
 function highestCount(array) {
   let maiorNumero = array[0]; //na posição 0 pq ele precisa começar na primeira posição, independente do valor dele ?
   let vezesNumero = 0;
