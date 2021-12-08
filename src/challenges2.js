@@ -27,8 +27,17 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
+/*
+a+b > c
+b+c > a
+a+c > b
+*/
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  if (Math.abs(lineA + lineB > lineC) && Math.abs(lineB + lineC > lineA) && Math.abs(lineA + lineC > lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
