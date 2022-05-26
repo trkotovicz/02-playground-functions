@@ -13,8 +13,6 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-/* O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. Usando o espaço vazio (" ") como parâmetro para o split, o código irá percorrer minha string e procurar todo lugar com espaço e dividir a string nesses pontos. (Ex: "Olá mundo" / o .split(" ") irá retornar um array de strings ["Olá", "mundo"])
-Referência MDN: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 function splitSentence(frase) {
   return frase.split(" ");
 }
@@ -33,13 +31,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Obtive ajuda na resolução do exercício no estudo em grupo, estava errando no segundo for e não passava por alguns erros de digitação
 function highestCount(array) {
-  let maiorNumero = array[0]; //na posição 0 pq ele precisa começar na primeira posição, independente do valor dele ?
+  let maiorNumero = array[0]; 
   let vezesNumero = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > maiorNumero) { //se o array no index for maior que o maiorNumero, ele é o maior número.. mas como a gente sabe que ele é o maior número em si?
+    if (array[index] > maiorNumero) { 
       maiorNumero = array[index];
     }
   }
@@ -52,7 +49,6 @@ function highestCount(array) {
 }
 
 // Desafio 7
-// referencia de Math.abs() retirado no MDN https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
     return "cat1";
@@ -79,8 +75,7 @@ function fizzBuzz(numeros) {
     }
   } 
   return array;
-}   
-
+}
 
 // Desafio 9
 function encode(arrayLetras) {   
@@ -137,15 +132,71 @@ function decode(code) {
   return uncode;
 }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
+// Desafio 10
+function techList(tech, name) {
+  let arrayTecnologias = [];
+  
+  if (tech.length === 0) {
+    return "Vazio!";
+  }
+
+  tech.sort();
+
+  for (let index = 0; index < tech.length; index += 1) {
+    let tecnologia = {
+      tech: tech[index],
+      name: name
+    }
+    arrayTecnologias.push(tecnologia);
+  }
+  return arrayTecnologias;
+}
+
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
+
+// Desafio 12
+// Para ser um triângulo, os lados precisam ser: a+b > c    e   b+c > a    e   a+c > b
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA + lineB > lineC) && Math.abs(lineB + lineC > lineA) && Math.abs(lineA + lineC > lineB)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Desafio 13
+function hydrate(drinks) {
+  let bebidas = 0;
+  
+  let arrayDrinks = drinks.replace(/[^1-9]/g,'');
+  arrayDrinks +=
+  bebidas = arrayDrinks.split("");
+  
+  let agua = 0;
+  for (let index = 0; index < bebidas.length; index += 1) {
+    agua += parseInt(bebidas[index]);
+  }
+  if (agua === 1){
+    return agua + " copo de água"
+  }
+  return agua + " copos de água"
+  
+}
+console.log(hydrate("1 cerveja, 5 cachaças e 1 copo de vinho"));
+
+
+
+/*
+Referências:
+
+O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. Usando o espaço vazio (" ") como parâmetro para o split, o código irá percorrer minha string e procurar todo lugar com espaço e dividir a string nesses pontos - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+A função Math.abs(x) retorna o valor absoluto de um número "x" - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
+O Regex vai buscar todos os caracteres que são diferentes do que eu coloquei como parâmetro (nesse caso os caracteres que vão de 1 a 9 [^1-9]) e está substituindo o que não for por "" (vazio) - https://www.horadecodar.com.br/2020/10/14/como-obter-apenas-os-numeros-de-uma-string-em-javascript/
+
+O parseInt() vai transformar o array de string que o regex criou e vai transformar em números inteiros - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+*/
