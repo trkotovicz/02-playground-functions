@@ -1,6 +1,7 @@
 # Boas vindas ao repositório do Projeto Playground Functions!
 
-Esse foi o segundo projeto desenvolvido no curso de Desenvolvimento Web na Trybe.
+Esse foi o segundo projeto desenvolvido no curso de Desenvolvimento Web na Trybe.</br>
+Nesse projeto, pude por em prática um pouco da lógica de programação adquirida até o momento da realização do mesmo.</br>
 As resoluções dos desafios estão no arquivo "challenges.js".
 
 # Habilidades
